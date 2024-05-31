@@ -1,0 +1,56 @@
+/* Apply flexbox layout to the inner div */
+.ufb-domain-search .ufb-domain-search-inner {
+    display: flex;
+    /* Use flexbox layout */
+    width: 100%;
+    /* Occupy 100% width of the container */
+}
+
+/* Styles for the input element */
+.ufb-domain-search input[type="text"] {
+    font-family: inherit;
+    /* Inherit font from parent element (<p>) */
+    font-weight: bold;
+    /* Apply bold font weight */
+    font-size: 18px;
+    /* Increase font size to 16px */
+    flex: 1;
+    /* Occupy remaining space */
+    height: 55px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    /* Include padding in the total width */
+    background-color: #fff;
+    /* White background */
+}
+
+/* Styles for the button element */
+.ufb-domain-search button[type="submit"] {
+    height: 55px;
+    min-width: 100px;
+    /* Set a minimum width for the button */
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* Include padding in the total width */
+}
+
+/* Adjust button hover styles */
+.ufb-domain-search button[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Error message styles */
+.error-message {
+    display: none;
+    color: red;
+    margin-top: 5px;
+}
