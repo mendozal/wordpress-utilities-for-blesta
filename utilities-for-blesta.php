@@ -16,3 +16,6 @@ add_action('wp_enqueue_scripts', 'ufb_enqueue_assets');
 
 // Include shortcode registration file
 require_once plugin_dir_path(__FILE__) . 'shortcodes/domain-search.php';
+
+// Include settings page file
+require_once plugin_dir_path(__FILE__) . 'ufb-settings-page.php';

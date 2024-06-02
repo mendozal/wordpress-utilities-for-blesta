@@ -16,13 +16,17 @@
     background-color: rgba(122, 125, 140, 0.05);
 }
 
+.ufb-domain-search input[type="text"]:focus,
+.ufb-domain-search input[type="text"].error:focus {
+    border-color: #aaa;
+}
+
 .ufb-domain-search input[type="text"].error {
     border-color: red;
     box-shadow: none;
 }
 
 .ufb-domain-search button[type="submit"] {
-    min-width: 200px;
     font-size: 16px;
     background-color: rgb(55, 126, 249);
     color: #fff;
