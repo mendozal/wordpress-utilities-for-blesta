@@ -10,8 +10,6 @@
 .ufb-domain-search input[type="text"] {
     font-family: inherit;
     /* Inherit font from parent element (<p>) */
-    font-weight: bold;
-    /* Apply bold font weight */
     font-size: 18px;
     /* Increase font size to 16px */
     flex: 1;
@@ -29,7 +27,7 @@
 /* Styles for the button element */
 .ufb-domain-search button[type="submit"] {
     height: 55px;
-    min-width: 100px;
+    min-width: 120px;
     /* Set a minimum width for the button */
     background-color: #007bff;
     color: #fff;
@@ -53,4 +51,23 @@
     display: none;
     color: red;
     margin-top: 5px;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+
+    /* Apply flexbox layout to the inner div */
+    .ufb-domain-search .ufb-domain-search-inner {
+        display: block;
+        text-align: center;
+    }
+
+    .ufb-domain-search input[type="text"] {
+        margin-bottom: 15px;
+    }
+
+    .ufb-domain-search button[type="submit"] {
+        min-width: 100%;
+        border-radius: 4px;
+    }
 }
