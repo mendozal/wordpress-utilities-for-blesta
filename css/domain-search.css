@@ -18,12 +18,39 @@
 
 .ufb-domain-search input[type="text"]:focus,
 .ufb-domain-search input[type="text"].error:focus {
-    border-color: #aaa;
+    border-color: red;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+    /* Red glow remains on focus */
 }
 
 .ufb-domain-search input[type="text"].error {
     border-color: red;
-    box-shadow: none;
+    border-width: 3px;
+    /* Thicker red border */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+    /* Red glow around the border */
+    animation: jiggle 0.3s ease-in-out;
+    /* Jiggle animation */
+}
+
+@keyframes jiggle {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
 }
 
 .ufb-domain-search button[type="submit"] {

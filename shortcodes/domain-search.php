@@ -31,7 +31,7 @@ function ufb_domain_search_shortcode($atts)
     <div class="ufb-domain-search">
         <form id="ufb-domain-search-form" method="post" action="<?php echo esc_url($atts['action_url']); ?>">
             <div class="ufb-domain-search-inner">
-                <input type="text" id="domain-input" name="domain" placeholder="Enter domain name" style="background-color: <?php echo esc_attr($atts['input_bg_color']); ?>; color: <?php echo esc_attr($atts['input_text_color']); ?>;" />
+                <input type="text" id="domain-input" name="domain" placeholder="Ingrese un nombre de dominio" style="background-color: <?php echo esc_attr($atts['input_bg_color']); ?>; color: <?php echo esc_attr($atts['input_text_color']); ?>;" />
                 <button type="submit" name="lookup" id="ufb-domain-search-button" style="background-color: <?php echo esc_attr($atts['button_color']); ?>; border-color: <?php echo esc_attr($atts['button_color']); ?>;" onmouseover="this.style.backgroundColor='<?php echo esc_attr($atts['button_hover_color']); ?>'; this.style.borderColor='<?php echo esc_attr($atts['button_hover_color']); ?>';" onmouseout="this.style.backgroundColor='<?php echo esc_attr($atts['button_color']); ?>'; this.style.borderColor='<?php echo esc_attr($atts['button_color']); ?>';"><?php echo esc_html__('Search'); ?></button>
             </div>
             <div id="error-message" class="error-message"></div>

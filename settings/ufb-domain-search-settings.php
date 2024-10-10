@@ -7,7 +7,7 @@ function ufb_render_input_field($field_key, $field_label, $options)
 <?php
 }
 
-// Render Action URL field
+// Render Action URL field (as text input)
 function ufb_render_action_url_field()
 {
     $options = get_option('ufb_domain_search_settings');
@@ -25,11 +25,13 @@ function ufb_register_domain_search_settings()
     // Add settings section for domain search plugin
     add_settings_section('ufb_domain_search_settings_section', 'Domain Search Settings', 'ufb_render_domain_search_settings_section_callback', 'ufb-settings');
 
-    // Add fields for domain search plugin
+    // Add the Action URL field (as text input)
+    add_settings_field('ufb_action_url', 'Action URL', 'ufb_render_action_url_field', 'ufb-settings', 'ufb_domain_search_settings_section');
+
+    // Other color picker fields
     $fields = array(
-        'ufb_action_url' => 'Action URL',
         'ufb_button_color' => 'Button Color',
-        'ufb_button_hover_color' => 'Button Hover Color', // New field for button hover color
+        'ufb_button_hover_color' => 'Button Hover Color',
         'ufb_input_bg_color' => 'Input Background Color',
         'ufb_input_text_color' => 'Input Text Color',
     );
