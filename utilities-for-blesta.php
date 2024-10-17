@@ -3,7 +3,7 @@
 Plugin Name: Utilities for Blesta
 Description: A collection of utilities for Blesta, starting with a domain search shortcode.
 Version: 1.0
-Author: Proxy Development
+Author: Luis M.
 */
 
 // Enqueue styles and scripts for the plugin
