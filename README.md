@@ -29,7 +29,7 @@ A menu item will be made available in WordPress' admin page in Settings->Utiliti
 
 The custom-order portion is the name of your order form. You'll have also the ability to set colors for a few elements of the domain search component.
 
-*Shortcode Attributes*
+**Shortcode Attributes**
 
 The shortcode supports the following attributes:
 
@@ -39,7 +39,7 @@ The shortcode supports the following attributes:
 - `input_bg_color` (string, optional): The background color of the input field. The default is `#ffffff`.
 - `input_text_color` (string, optional): The text color of the input field. The default is `#000000`.
 
-*Example Usages*
+**Example Usages**
 
 1. Basic usage with default settings:
 
@@ -58,6 +58,19 @@ The shortcode supports the following attributes:
    ```
    [ufb_domain_search input_bg_color="#f0f0f0" input_text_color="#333333" button_hover_color="rgb(100, 200, 100)"]
    ```
+
+## Blesta configuration
+
+**Important Notice**: To make this project work, you need to disable CSRF protection for a specific route in your application. Please be aware that disabling CSRF protection can introduce security risks. Make sure to analyze the implications and proceed with caution. Use this approach at your own risk.
+
+You'll need to disable CSRF protection specifically for the "preconfig" route, as the plugin will post data from an external source to that page. There is no need to disable CSRF protection for any other route.
+
+**Procedure**
+
+1. In your blesta installation folder, edit the file config/blesta.php.
+2. Search for `Configure::set('Blesta.csrf_bypass', '');`. In a new installation, the second parameter should be empty.
+3. Add the "preconfig" route to the parameter, like this: `Configure::set('Blesta.csrf_bypass', ['config::preconfig']);`
+4. Save the file.
 
 ## Requirements
 
